@@ -1,0 +1,18 @@
+package controller;
+
+import java.util.*;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.web.bind.annotation.*;
+import service.messageService;
+import model.Message;
+
+@RestController
+public class messageController {
+	
+	@RequestMapping("/hello")
+	public List<Message> getMessage() {
+		return Arrays.asList(
+				new Message("Hello, World!")
+				);
+	}
+}

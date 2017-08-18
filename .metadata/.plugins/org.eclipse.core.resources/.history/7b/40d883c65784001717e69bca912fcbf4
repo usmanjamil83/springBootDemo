@@ -1,0 +1,26 @@
+// name of the package
+package helloWorld;
+
+// importing the java library
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.context.annotation.*;
+
+@Controller
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan({"controller"})
+public class helloWorld {
+
+    @RequestMapping("/")
+    @ResponseBody
+    String home() {
+        return "Hello World!";
+    }
+
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(helloWorld.class, args);
+    }
+}

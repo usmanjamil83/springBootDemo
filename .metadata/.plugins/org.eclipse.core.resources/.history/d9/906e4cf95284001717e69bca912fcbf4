@@ -1,0 +1,16 @@
+package service;
+
+import java.util.*;
+import org.springframework.stereotype.Service;
+import model.Message;
+
+@Service
+public class messageService {
+	Hashtable<String, Message> message = new Hashtable<String, Message>();
+	public messageService() {
+		Message m = new Message();
+		m.setText("Hello, World!");
+	}
+	public Hashtable<String, Message> get() {
+		return message;}	
+}

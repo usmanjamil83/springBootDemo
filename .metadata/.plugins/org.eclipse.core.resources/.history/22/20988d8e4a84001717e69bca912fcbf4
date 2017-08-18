@@ -1,0 +1,14 @@
+package service;
+
+import org.springframework.stereotype.Service;
+import model.message;
+
+@Service
+public class messageService {
+	public messageService() {
+		message m = new message();
+		m.setText("Hello, World!");
+	}
+	public message getmessage(String text) {
+		return null;}	
+}
